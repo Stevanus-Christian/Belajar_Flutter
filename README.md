@@ -118,9 +118,9 @@ flutter run -d chrome
 ```
 Setelah proses build selesai, jendela browser akan muncul dan menampilkan aplikasi Anda.
 Pada Flutter Web, perlu diperhatikan bahwa Flutter memiliki dua jenis renderer yang berbeda, keduanya antara lain:
-- HTML renderer
+- HTML renderer : 
 Renderer ini menggunakan kombinasi elemen HTML, CSS, Canvas, dan SVG. Jenis renderer ini memiliki ukuran unduhan yang lebih kecil.
-- CanvasKit renderer
+- CanvasKit renderer : 
 Renderer ini bekerja dengan cara yang sama dengan platform mobile atau desktop. CanvasKit renderer memiliki performa yang lebih tinggi, tetapi akan menambahkan ukuran hingga sekitar 2 MB.
 Anda dapat menentukan renderer yang digunakan dengan menambahkan parameter pada command line, contohnya seperti berikut:
 
@@ -159,7 +159,7 @@ Namun, tentunya akan lebih baik jika Anda menggunakan signing key milik Anda sen
 </p>
 
 ## Build IPA
-<p align="justify">
+<p style="color:red; background-color:tomato; text-align:justify;">
 Catatan: Build .IPA hanya bisa dijalankan dengan mendaftar akun Apple Developer Program. Silakan baca informasi tentang Apple Developer Program di sini https://developer.apple.com/programs/.
 </p>
 <p align="justify">
