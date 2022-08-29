@@ -10,6 +10,7 @@
 </p>
 
 ## Instalasi Flutter
+<p align="justify">
 1. Unduh paket instalasi untuk mendapatkan versi stabil terbaru dari Flutter SDK di alamat web https://flutter.dev/docs/development/tools/sdk/releases. Ambil versi terbaru pada stable channel sesuai sistem operasi yang digunakan.
 2. Ekstrak berkas zip dan tempatkan folder flutter pada lokasi instalasi yang diinginkan untuk Flutter SDK. Misalnya C:\Development, jangan pasang Flutter di direktori seperti C:\Program Files atau yang membutuhkan hak istimewa seperti administrator.
 3. Temukan berkas flutter_console.bat di dalam direktori flutter tersebut. Mulai dengan klik dua kali atau jalankan script tersebut dan Anda sekarang siap untuk menjalankan perintah Flutter di Flutter Console.
@@ -24,9 +25,11 @@
 ```
 flutter doctor
 ```
+</p>
 
 ## Instalasi IDE
 #### 1. Android Studio/IntelliJ
+<p align="justify">
 Android Studio dan IntelliJ menawarkan pengalaman IDE yang terintegrasi lengkap dengan plugin khusus untuk Flutter. Untuk mengunduh Android Studio, Anda dapat mengunjungi tautan https://developer.android.com/studio. Sedangkan jika Anda memilih IntelliJ maka dapat melalui tautan https://www.jetbrains.com/idea/download/.
 Berikut adalah cara instalasi Flutter danplugin Dart di Android Studio/IntelliJ:
 1. Pertama, buka terlebih dahulu Android Studio/IntelliJ.
@@ -34,8 +37,10 @@ Berikut adalah cara instalasi Flutter danplugin Dart di Android Studio/IntelliJ:
 3. Jika IDE Android Studio/IntelliJ tidak pad ahalaman Welcome, Anda dapat pilih menu File > Settings > Plugins bagi pengguna OS Windows dan Linux. Sedangkan bagi pengguna MacOS, Pilih menu Android Studio > Preferences > Plugins.
 4. Pilih menu Marketplace, ketik Flutter pada pencarian plugins dan instal. Saat Anda melakukan instalasi plugins Flutter maka secara otomatis Dart juga terinstal.
 5. Klik Restart saat diminta. Jika tidak muncul, silakan muat ulang secara manual aplikasi Android Studio/IntelliJ.
+</p>
 
 #### 2. Visual Studio Code
+<p align="justify">
 Visual Studio Code (VSCode) adalah editor ringan untuk mengkombinasikan baris perintah khususnya aplikasi Flutter dan dilengkapi dukungan debugging. Untuk mengunduh Visual Studio Code, kunjungi tautan https://code.visualstudio.com/download.
 Berikut adalah cara instalasi plugin Flutter dan Dart di VSCode:
 1. Buka aplikasi Visual Studio Code yang telah diinstal sebelumnya.
@@ -46,6 +51,7 @@ Berikut adalah cara instalasi plugin Flutter dan Dart di VSCode:
 6. Aktifkan Command Line dengan cara pilih View>Command Pallete…
 7. Ketik “doctor”, lalu pilih Flutter: Run Flutter Doctor.
 8. Tinjau panel OUTPUT untuk melihat masalah apapun.
+</p>
 
 ## Project Wizard
 #### 1. Android Studio/IntelliJ
