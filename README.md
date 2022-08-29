@@ -27,9 +27,8 @@ flutter doctor
 
 ## Instalasi IDE
 #### 1. Android Studio/IntelliJ
-<p align="justify">
 Android Studio dan IntelliJ menawarkan pengalaman IDE yang terintegrasi lengkap dengan plugin khusus untuk Flutter. Untuk mengunduh Android Studio, Anda dapat mengunjungi tautan https://developer.android.com/studio. Sedangkan jika Anda memilih IntelliJ maka dapat melalui tautan https://www.jetbrains.com/idea/download/.
-</p>
+
 Berikut adalah cara instalasi Flutter danplugin Dart di Android Studio/IntelliJ:
 1. Pertama, buka terlebih dahulu Android Studio/IntelliJ.
 2. Pada halaman Welcome pilih menu Plugins di bagian kiri.
@@ -38,9 +37,8 @@ Berikut adalah cara instalasi Flutter danplugin Dart di Android Studio/IntelliJ:
 5. Klik Restart saat diminta. Jika tidak muncul, silakan muat ulang secara manual aplikasi Android Studio/IntelliJ.
 
 #### 2. Visual Studio Code
-<p align="justify">
 Visual Studio Code (VSCode) adalah editor ringan untuk mengkombinasikan baris perintah khususnya aplikasi Flutter dan dilengkapi dukungan debugging. Untuk mengunduh Visual Studio Code, kunjungi tautan https://code.visualstudio.com/download.
-</p>
+
 Berikut adalah cara instalasi plugin Flutter dan Dart di VSCode:
 1. Buka aplikasi Visual Studio Code yang telah diinstal sebelumnya.
 2. Kemudian aktifkan Command Line dengan cara pilih View > Command Pallete…
@@ -109,9 +107,11 @@ Untuk menambahkan dukungan web pada project Anda, jalankan perintah berikut mela
 flutter config --enable-web
 flutter create .
 ```
+
 <p align="justify">
 Setelah konfigurasi dan proses re-create berhasil, folder web akan ditambahkan ke dalam folder project Anda. Di dalam folder ini akan berisi berkas html dan konfigurasi web lainnya. Anda bisa mencoba menjalankan aplikasi web Flutter ini dengan memilih target device chrome pada IDE yang Anda gunakan. Ketika target device Chrome sudah terpilih seperti di atas, Anda dapat menjalankan aplikasi dengan cara yang sama seperti ketika menjalankannya pada platform mobile. Jika Anda ingin menjalankan melalui terminal, maka perintahnya adalah seperti ini:
 </p>
+
 ```
 flutter run -d chrome
 ```
@@ -124,10 +124,12 @@ Renderer ini menggunakan kombinasi elemen HTML, CSS, Canvas, dan SVG. Jenis rend
 Renderer ini bekerja dengan cara yang sama dengan platform mobile atau desktop. CanvasKit renderer memiliki performa yang lebih tinggi, tetapi akan menambahkan ukuran hingga sekitar 2 MB.
 Anda dapat menentukan renderer yang digunakan dengan menambahkan parameter pada command line, contohnya seperti berikut:
 </p>
+
 ```
 flutter run -d chrome --web-renderer html
 flutter run -d chrome --web-renderer canvaskit
 ```
+
 <p align="justify">
 Jika Anda tidak mendefinisikan parameter --web-renderer, maka renderer akan menggunakan mode auto (default). Opsi ini akan menggunakan HTML renderer ketika aplikasi berjalan di browser mobile dan menggunakan CanvasKit saat aplikasi berjalan di browser desktop.
 </p>
@@ -140,15 +142,19 @@ Sebelum mem-build APK, kita akan mengatur berkas android/app/src/main/AndroidMan
 <p align="justify">
 Setelah kita mengatur nama dan ikon aplikasi, langkah selanjutnya adalah melakukan build aplikasi menjadi APK. Sebelumnya terdapat tiga (3) jenis mode aplikasi yang perlu diketahui, yaitu debug, profile, dan release. APK debug umumnya digunakan untuk pengujian dan penggunaan aplikasi secara internal. Mode debug digunakan secara default ketika menjalankan aplikasi menggunakan perintah flutter run. Sementara untuk bisa dirilis melalui Google Play Store, Anda perlu membuat APK release. Sedangkan mode profile sama hal nya dengan release hanya saja tetap dapat di-debug menggunakan tools seperti DevTools dan tidak dapat dijalankan di emulator atau simulator. Pada kelas ini kita akan mempelajari bagaimana membuat APK debug. Caranya ialah menggunakan terminal pada Android Studio. Tekan tombol Terminal yang ada pada pojok kiri bawah. Bila menggunakan Visual Studio Code pilih menu terminal yang ada pada menu kiri atas. Lalu pilih new terminal. Jika terminal telah muncul, tuliskan perintah berikut:
 </p>
+
 ```
 flutter build apk --debug
 ```
+
 <p align="justify">
 Tunggu hingga proses build berhasil. Setelah berhasil, hasil build yang berupa berkas apk-debug.apk akan terletak di folder build/app/outputs/apk/debug/ atau akan muncul direktori tempat tersimpannya berkas ketika proses build selesai pada Terminal. Untuk bisa mem-build apk release dan mengunggahnya melalui Google Play Store, Anda memerlukan signing key. Signing key ini digunakan sebagai tanda tangan supaya aplikasi Anda lebih aman. Secara default Flutter menggunakan debug key sebagai signing key sehingga Anda sebenarnya bisa membuat apk release dengan menjalankan perintah berikut:
 </p>
+
 ```
 flutter build apk
 ```
+
 <p align="justify">
 Namun, tentunya akan lebih baik jika Anda menggunakan signing key milik Anda sendiri. Cara untuk membuat signing key dan membuat apk release dapat Anda baca pada tautan dokumentasi berikut: https://flutter.dev/docs/deployment/android.
 </p>
@@ -164,15 +170,19 @@ Pada materi ini kita akan mempelajari bagaimana melakukan build aplikasi Flutter
 <p align="justify">
 Untuk mengatur nama aplikasi buka berkas Info.plist pada direktori /ios/Runner/. Konfigurasi untuk nama aplikasi dapat Anda temukan dan ubah pada key Bundle Name. Sama seperti perangkat Android, layar untuk perangkat iPhone juga terbagi ke dalam berbagai ukuran. Sehingga diperlukan juga ukuran ikon yang berbeda. Selanjutnya Anda dapat mengganti folder Assets.xcassets yang ada pada direktori /ios/Runner/ dengan hasil ikon yang sudah Anda generate. File IPA juga terbagi menjadi debug, profile, dan release. Namun untuk melakukan build aplikasi Flutter menjadi IPA hanya bisa dilakukan pada device macOS. Untuk melakukan build aplikasi menjadi .ipa Anda cukup membuka terminal pada editor atau IDE Anda lalu menjalankan perintah berikut:
 </p>
+
 ```
 flutter build ios
 ```
+
 <p align="justify">
 Secara default perintah di atas akan menghasilkan ipa release, sedangkan jika Anda ingin membuat versi debug atau profile, gunakan perintah:
 </p>
+
 ```
 flutter build ios --debug
 ```
+
 <p align="justify">
 Namun, bagi Anda yang tidak mempunyai perangkat Apple jangan khawatir, Anda tetap dapat men-deploy project Anda ke iOS menggunakan CI/CD seperti Codemagic dan Bitrise.
 </p>
@@ -181,9 +191,11 @@ Namun, bagi Anda yang tidak mempunyai perangkat Apple jangan khawatir, Anda teta
 <p align="justify">
 Untuk mengatur nama aplikasi, kita bisa membuka berkas manifest.json. Konfigurasi untuk nama aplikasi dapat Anda temukan dan ubah pada key name dan short_name. Platform web juga membutuhkan icon dalam berbagai ukuran. Icon untuk web dapat Anda taruh pada folder /web/icons. Kemudian, Anda perlu mendaftarkannya pada berkas manifest.json. Sama seperti build aplikasi android dan ios, untuk mem-build aplikasi Flutter web kita menjalankan perintah flutter web. Perintah selengkapnya adalah seperti ini:
 </p>
+
 ```
 flutter build web
 ```
+
 <p align="justify">
 Sama seperti ketika menjalankan flutter web, ketika melakukan build, kita juga bisa menentukan renderer yang ingin digunakan. Untuk menentukan renderer yang digunakan, tambahkan parameter --web-renderer pada perintah flutter build. Jika tidak mendefinisikan parameter --web-renderer maka mode auto yang akan digunakan. Hasil build akan Anda temukan pada folder /build/web. Folder inilah yang nantinya bisa Anda deploy ke sebuah web hosting atau web server.
 </p>
