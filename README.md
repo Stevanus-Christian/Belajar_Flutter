@@ -103,6 +103,7 @@ Pada halaman ini Anda bisa mengubah konfigurasi hardware yang telah ditentukan s
 Selain platform mobile, Flutter juga bisa berjalan pada web browser. Dalam proses pengembangan, untuk keperluan debugging kita perlu menggunakan Google Chrome sebagai browser. Sejak Flutter versi 2.0 Flutter Web sudah memasuki versi stable sehingga bisa digunakan secara langsung. Jika menggunakan versi di bawahnya, Anda perlu mengaktifkan channel beta terlebih dahulu. Silakan ikuti langkahnya pada blog berikut.
 </p>
 Untuk menambahkan dukungan web pada project Anda, jalankan perintah berikut melalui terminal dari lokasi project:
+
 ```
 flutter config --enable-web
 flutter create .
@@ -120,10 +121,8 @@ Pada Flutter Web, perlu diperhatikan bahwa Flutter memiliki dua jenis renderer y
 - HTML renderer
 Renderer ini menggunakan kombinasi elemen HTML, CSS, Canvas, dan SVG. Jenis renderer ini memiliki ukuran unduhan yang lebih kecil.
 - CanvasKit renderer
-<p align="justify">
 Renderer ini bekerja dengan cara yang sama dengan platform mobile atau desktop. CanvasKit renderer memiliki performa yang lebih tinggi, tetapi akan menambahkan ukuran hingga sekitar 2 MB.
 Anda dapat menentukan renderer yang digunakan dengan menambahkan parameter pada command line, contohnya seperti berikut:
-</p>
 
 ```
 flutter run -d chrome --web-renderer html
